@@ -1,0 +1,101 @@
+# 포트폴리오용 .gitignore
+
+# 민감한 설정 파일들
+.streamlit/secrets.toml
+config.toml
+config/*.toml
+!config/*.example
+
+# 환경 변수 파일들
+.env
+.env.local
+.env.production
+*.env
+
+# SSL 인증서 및 키 파일들
+ssl_certs/*.pem
+ssl_certs/*.key
+ssl_certs/*.crt
+!ssl_certs/.gitkeep
+
+# 로그 파일들
+logs/*.log
+logs/*.txt
+!logs/.gitkeep
+
+# 캐시 및 임시 파일들
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 가상환경
+venv/
+env/
+ENV/
+
+# IDE 설정 파일들
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS 생성 파일들
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 세션 파일들 (실제 사용자 정보 포함)
+sessions/
+*.session
+
+# 백업 파일들
+*.bak
+*.backup
+
+# 테스트 및 커버리지
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Docker 관련
+.dockerignore
+
+# 원본 프로젝트 디렉토리 (포트폴리오에서 제외)
+TESLA_TPC_STREAMLIT/
+TESLA_CRM_BRAZE/
+
+# 실제 데이터 파일들
+data/
+*.csv
+*.xlsx
+*.json
+!sample_data/
+
+# 설치 스크립트 (민감한 정보 포함 가능)
+install.sh
+deploy.sh 

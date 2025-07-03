@@ -1,0 +1,29 @@
+[snowflake]
+# Snowflake 계정 정보
+account = "your_account.region"  # 예: xy12345.us-east-1
+user = "your_username"
+
+# 인증 방식 선택 (password 또는 private_key 중 하나만 사용)
+# 방법 1: Password 인증
+password = "your_password"
+
+# 방법 2: Private Key 인증 (더 안전)
+# private_key_path = "/path/to/your/private_key.p8"
+# 또는
+# private_key = "-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----"
+
+# 데이터베이스 설정
+warehouse = "your_warehouse"
+database = "your_database"
+schema = "your_schema"
+role = "ACCOUNTADMIN"  # 또는 다른 역할
+
+# 사용 예시:
+# [snowflake]
+# account = "xy12345.us-east-1"
+# user = "myuser"
+# password = "mypassword123"
+# warehouse = "COMPUTE_WH"
+# database = "COMPANY_DW"
+# schema = "ANALYSIS_BRAND_A"
+# role = "ANALYST" 

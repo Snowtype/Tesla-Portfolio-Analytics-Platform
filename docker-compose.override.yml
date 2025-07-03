@@ -1,0 +1,10 @@
+services:
+  app-base:
+    volumes:
+      # 로컬 소스코드와 컨테이너 동기화
+      - ./:/app
+
+  nginx:
+    volumes:
+      # 로컬 SSL 인증서 공유
+      - ./ssl_certs:/etc/nginx/ssl:ro

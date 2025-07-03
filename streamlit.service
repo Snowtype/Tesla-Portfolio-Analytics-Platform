@@ -1,0 +1,15 @@
+[Unit]
+Description=Streamlit TESLA CRM App
+After=network.target
+
+[Service]
+Type=simple
+User=mask
+WorkingDirectory=/home/mask/TESLA_CRM/TESLA_TPC_STREAMLIT
+Environment=PATH=/home/mask/TESLA_CRM/TESLA_TPC_STREAMLIT/venv/bin
+ExecStart=/home/mask/TESLA_CRM/TESLA_TPC_STREAMLIT/venv/bin/streamlit run app.py --server.port 3001 --server.address 0.0.0.0
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target 
